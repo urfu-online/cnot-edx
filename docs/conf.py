@@ -1,6 +1,6 @@
 # pylint: disable=invalid-name
 """
-umnoc-edx documentation build configuration file.
+cnot-edx documentation build configuration file.
 
 This file is execfile()d with the current directory set to its
 containing dir.
@@ -35,7 +35,7 @@ def get_version(*file_paths):
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(REPO_ROOT)
 
-VERSION = get_version('../umnoc', '__init__.py')
+VERSION = get_version('../cnot', '__init__.py')
 
 # Configure Django for autodoc usage
 os.environ['DJANGO_SETTINGS_MODULE'] = 'test_settings'
@@ -89,10 +89,10 @@ source_suffix = '.rst'
 top_level_doc = 'index'
 
 # General information about the project.
-project = 'umnoc-edx'
+project = 'cnot-edx'
 copyright = edx_theme.COPYRIGHT  # pylint: disable=redefined-builtin
 author = edx_theme.AUTHOR
-project_title = 'UMNOC management platform'
+project_title = 'CNOT management platform'
 documentation_title = f"{project_title}"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -175,7 +175,7 @@ html_theme_path = [edx_theme.get_html_theme_path()]
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = 'umnoc-edx v0.1.0'
+# html_title = 'cnot-edx v0.1.0'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -360,7 +360,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (top_level_doc, project_title, documentation_title,
-     author, project_title, 'UMNOC Educational programs and online courses management subsystem.',
+     author, project_title, 'CNOT Educational programs and online courses management subsystem.',
      'Miscellaneous'),
 ]
 
@@ -488,8 +488,8 @@ def on_init(app):  # pylint: disable=unused-argument
         # If we are, assemble the path manually
         bin_path = os.path.abspath(os.path.join(sys.prefix, 'bin'))
         apidoc_path = os.path.join(bin_path, apidoc_path)
-    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'umnoc'),
-                os.path.join(root_path, 'umnoc/migrations')])
+    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'cnot'),
+                os.path.join(root_path, 'cnot/migrations')])
 
 
 def setup(app):

@@ -1,5 +1,5 @@
 """
-Database models for umnoc courses module.
+Database models for cnot courses module.
 """
 import re
 from datetime import datetime
@@ -19,7 +19,7 @@ from model_utils.models import (
     MonitorField)
 from simple_history.models import HistoricalRecords
 
-from umnoc.utils import rough_search
+from cnot.utils import rough_search
 
 
 class Course(CloneModel, TimeStampedModel, SoftDeletableModel):
@@ -44,7 +44,7 @@ class Course(CloneModel, TimeStampedModel, SoftDeletableModel):
         return s
 
     class Meta:
-        app_label = 'umnoc'
+        app_label = 'cnot'
         verbose_name = 'курс'
         verbose_name_plural = 'курсы'
         
@@ -52,7 +52,7 @@ class Course(CloneModel, TimeStampedModel, SoftDeletableModel):
 
     external = models.BooleanField(_('External course'), default=False)
 
-    course_overview = models.ForeignKey('course_overviews.CourseOverview', related_name='umnoc_course', blank=True,
+    course_overview = models.ForeignKey('course_overviews.CourseOverview', related_name='cnot_course', blank=True,
                                         null=True, on_delete=models.CASCADE)
 
     target = models.TextField('Описание направленности и целевого назначения курса', blank=True, null=True)
@@ -91,9 +91,9 @@ class Course(CloneModel, TimeStampedModel, SoftDeletableModel):
 
     def __str__(self) -> str:
         if not self.external:
-            return f'<UMNOC course, ID: {self.course_overview}, title: {self.course_overview.display_name}>'
+            return f'<CNOT course, ID: {self.course_overview}, title: {self.course_overview.display_name}>'
         else:
-            return f'<External UMNOC course, title: {self.display_name_f}>'
+            return f'<External CNOT course, title: {self.display_name_f}>'
 
     @property
     def duration(self) -> str:

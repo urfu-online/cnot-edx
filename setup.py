@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Package metadata for umnoc.
+Package metadata for cnot.
 """
 import os
 import re
@@ -89,7 +89,7 @@ def is_requirement(line):
     return line and line.strip() and not line.startswith(("-r", "#", "-e", "git+", "-c"))
 
 
-VERSION = get_version('umnoc', '__init__.py')
+VERSION = get_version('cnot', '__init__.py')
 
 if sys.argv[-1] == 'tag':
     print("Tagging the version on github:")
@@ -101,15 +101,15 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst'), encoding="u
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst'), encoding="utf8").read()
 
 setup(
-    name='umnoc-edx',
+    name='cnot-edx',
     version=VERSION,
-    description='UMNOC Educational programs and online courses management subsystem.',
+    description='CNOT Educational programs and online courses management subsystem.',
     long_description=README + '\n\n' + CHANGELOG,
     author='N.V.Ignatchenko',
     author_email='mastergowen@gmail.com',
-    url='https://github.com/umnoc/umnoc-edx',
+    url='https://github.com/urfu-online/cnot-edx',
     packages=[
-        'umnoc',
+        'cnot',
     ],
     include_package_data=True,
     install_requires=load_requirements('requirements/base.in'),

@@ -53,8 +53,8 @@ output/*/index.html
 # Sphinx
 docs/_build
 docs/modules.rst
-docs/umnoc_edx.rst
-docs/umnoc_edx.*.rst
+docs/cnot_edx.rst
+docs/cnot_edx.*.rst
 
 # Private requirements
 requirements/private.in

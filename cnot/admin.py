@@ -20,11 +20,11 @@ from .learners.models import ProgramEnrollment, LearningRequest
 from .profiles.models import Role, UrFUProfile, LeadRequest
 
 
-class UMNOCAdminSite(admin.AdminSite):
-    site_header = _("UMNOC administration")
+class CNOTAdminSite(admin.AdminSite):
+    site_header = _("CNOT administration")
 
 
-umnoc_admin_site = UMNOCAdminSite(name="umnoc_admin")
+cnot_admin_site = CNOTAdminSite(name="cnot_admin")
 
 
 # inlines
@@ -67,7 +67,7 @@ class AuthorInline(OrderableAdmin, admin.TabularInline):
 # modeladmins
 
 
-@admin.register(CourseOverview, site=umnoc_admin_site)
+@admin.register(CourseOverview, site=cnot_admin_site)
 class CourseOverviewAdmin(admin.ModelAdmin):
     """
     Simple, read-only list/search view of Course Overviews.
@@ -86,7 +86,7 @@ class CourseOverviewAdmin(admin.ModelAdmin):
     search_fields = ["id", "display_name"]
 
 
-@admin.register(Course, site=umnoc_admin_site)
+@admin.register(Course, site=cnot_admin_site)
 class CourseAdmin(CloneModelAdmin, SimpleHistoryAdmin):
     autocomplete_fields = ["course_overview"]
     search_fields = [
@@ -160,7 +160,7 @@ class CourseAdmin(CloneModelAdmin, SimpleHistoryAdmin):
     include_duplicate_object_link = True
 
 
-@admin.register(Program, site=umnoc_admin_site)
+@admin.register(Program, site=cnot_admin_site)
 class ProgramAdmin(admin.ModelAdmin):
     list_display = ("title", "slug", "logo", "active", "owner")
     list_filter = ("active", "owner")
@@ -170,7 +170,7 @@ class ProgramAdmin(admin.ModelAdmin):
     inlines = [ProgramCourseInline]
 
 
-@admin.register(Organization, site=umnoc_admin_site)
+@admin.register(Organization, site=cnot_admin_site)
 class OrganizationAdmin(admin.ModelAdmin):
     list_display = ("title", "short_name", "logo", "active")
     list_filter = ("active",)
@@ -182,7 +182,7 @@ class OrganizationAdmin(admin.ModelAdmin):
     inlines = [OrganizationCourseInline]
 
 
-@admin.register(ProgramEnrollment, site=umnoc_admin_site)
+@admin.register(ProgramEnrollment, site=cnot_admin_site)
 class ProgramEnrollmentAdmin(admin.ModelAdmin):
     list_display = (
         "user",
@@ -196,7 +196,7 @@ class ProgramEnrollmentAdmin(admin.ModelAdmin):
     raw_id_fields = ("user",)
 
 
-@admin.register(LearningRequest, site=umnoc_admin_site)
+@admin.register(LearningRequest, site=cnot_admin_site)
 class LearningRequestAdmin(admin.ModelAdmin):
     list_display = ("user", "course_id", "status")
     list_filter = ("status",)
@@ -204,12 +204,12 @@ class LearningRequestAdmin(admin.ModelAdmin):
     raw_id_fields = ("user",)
 
 
-@admin.register(Role, site=umnoc_admin_site)
+@admin.register(Role, site=cnot_admin_site)
 class RoleAdmin(admin.ModelAdmin):
     list_display = ("title",)
 
 
-@admin.register(UrFUProfile, site=umnoc_admin_site)
+@admin.register(UrFUProfile, site=cnot_admin_site)
 class UrFUProfileAdmin(admin.ModelAdmin):
     list_display = (
         "user",
@@ -225,7 +225,7 @@ class UrFUProfileAdmin(admin.ModelAdmin):
     # list_filter = ('type',)
 
 
-@admin.register(LeadRequest, site=umnoc_admin_site)
+@admin.register(LeadRequest, site=cnot_admin_site)
 class LeadRequestAdmin(admin.ModelAdmin):
     list_display = (
         "pk",
@@ -267,7 +267,7 @@ except NotRegistered:
     pass
 
 
-@admin.register(User, site=umnoc_admin_site)
+@admin.register(User, site=cnot_admin_site)
 class UserAdmin(BaseUserAdmin):
     actions = (make_active,)
     list_display = BaseUserAdmin.list_display + ("is_active", "date_joined")
@@ -279,11 +279,11 @@ class UserAdmin(BaseUserAdmin):
         return ["-date_joined"]
 
 
-@admin.register(LikedCourse, site=umnoc_admin_site)
+@admin.register(LikedCourse, site=cnot_admin_site)
 class LikedCourseAdmin(admin.ModelAdmin):
     list_display = ("__str__",)
 
 
-@admin.register(ExternalPlatform, site=umnoc_admin_site)
+@admin.register(ExternalPlatform, site=cnot_admin_site)
 class ExternalPlatformAdmin(SimpleHistoryAdmin):
     list_display = ("title", "sources_list_url")

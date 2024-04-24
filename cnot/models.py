@@ -1,5 +1,5 @@
 """
-Database models for umnoc.
+Database models for cnot.
 """
 # from django.db import models
 from .core.models import (Organization, OrganizationCourse, ProgramCourse, Direction, Project, TextBlock)

@@ -76,7 +76,7 @@ JAZZMIN_SETTINGS = {
     'hide_models': [],
 
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
-    'order_with_respect_to': ['umnoc', ],
+    'order_with_respect_to': ['cnot', ],
 
     # Custom links to append to app groups, keyed on app name
     # 'custom_links': {
@@ -138,8 +138,8 @@ JAZZMIN_UI_TWEAKS = {
 }
 
 LOGO_IMAGE_EXTRA_TEXT = 'Уральский межрегиональный научно-образовательный центр мирового уровня'
-UMNOC_LOGO_URL = 'https://edu.umnoc.ru/'
-LOGOUT_REDIRECT_URL = UMNOC_LOGO_URL
+CNOT_LOGO_URL = 'https://edu.umnoc.ru/'
+LOGOUT_REDIRECT_URL = CNOT_LOGO_URL
 
 BITRIX_URL = 'https://fgaouvo.bitrix24.ru/'
 BITRIX_USER_ID = '1'

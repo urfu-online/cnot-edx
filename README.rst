@@ -1,4 +1,4 @@
-umnoc-edx
+cnot-edx
 =============================
 
 |pypi-badge| |ci-badge| |codecov-badge| |doc-badge| |pyversions-badge|
@@ -9,7 +9,7 @@ which sets it in the context of other repositories under the ``edx``
 organization. It should make clear where this fits in to the overall edX
 codebase.
 
-UMNOC Educational programs and online courses management subsystem.
+CNOT Educational programs and online courses management subsystem.
 
 Overview (please modify)
 ------------------------
@@ -31,11 +31,11 @@ One Time Setup
 .. code-block::
 
   # Clone the repository
-  git clone git@github.com:edx/umnoc-edx.git
-  cd umnoc-edx
+  git clone git@github.com:edx/cnot-edx.git
+  cd cnot-edx
 
   # Set up a virtualenv using virtualenvwrapper with the same name as the repo and activate it
-  mkvirtualenv -p python3.8 umnoc-edx
+  mkvirtualenv -p python3.8 cnot-edx
 
 
 Every time you develop something in this repo
@@ -43,7 +43,7 @@ Every time you develop something in this repo
 .. code-block::
 
   # Activate the virtualenv
-  workon umnoc-edx
+  workon cnot-edx
 
   # Grab the latest code
   git checkout main
@@ -113,26 +113,26 @@ For more information about these options, see the `Getting Help`_ page.
 .. _community Slack workspace: https://openedx.slack.com/
 .. _Getting Help: https://openedx.org/getting-help
 
-.. |pypi-badge| image:: https://img.shields.io/pypi/v/umnoc-edx.svg
-    :target: https://pypi.python.org/pypi/umnoc-edx/
+.. |pypi-badge| image:: https://img.shields.io/pypi/v/cnot-edx.svg
+    :target: https://pypi.python.org/pypi/cnot-edx/
     :alt: PyPI
 
-.. |ci-badge| image:: https://github.com/edx/umnoc-edx/workflows/Python%20CI/badge.svg?branch=main
-    :target: https://github.com/edx/umnoc-edx/actions
+.. |ci-badge| image:: https://github.com/edx/cnot-edx/workflows/Python%20CI/badge.svg?branch=main
+    :target: https://github.com/edx/cnot-edx/actions
     :alt: CI
 
-.. |codecov-badge| image:: https://codecov.io/github/edx/umnoc-edx/coverage.svg?branch=main
-    :target: https://codecov.io/github/edx/umnoc-edx?branch=main
+.. |codecov-badge| image:: https://codecov.io/github/edx/cnot-edx/coverage.svg?branch=main
+    :target: https://codecov.io/github/edx/cnot-edx?branch=main
     :alt: Codecov
 
-.. |doc-badge| image:: https://readthedocs.org/projects/umnoc-edx/badge/?version=latest
-    :target: https://umnoc-edx.readthedocs.io/en/latest/
+.. |doc-badge| image:: https://readthedocs.org/projects/cnot-edx/badge/?version=latest
+    :target: https://cnot-edx.readthedocs.io/en/latest/
     :alt: Documentation
 
-.. |pyversions-badge| image:: https://img.shields.io/pypi/pyversions/umnoc-edx.svg
-    :target: https://pypi.python.org/pypi/umnoc-edx/
+.. |pyversions-badge| image:: https://img.shields.io/pypi/pyversions/cnot-edx.svg
+    :target: https://pypi.python.org/pypi/cnot-edx/
     :alt: Supported Python versions
 
-.. |license-badge| image:: https://img.shields.io/github/license/edx/umnoc-edx.svg
-    :target: https://github.com/edx/umnoc-edx/blob/main/LICENSE.txt
+.. |license-badge| image:: https://img.shields.io/github/license/edx/cnot-edx.svg
+    :target: https://github.com/edx/cnot-edx/blob/main/LICENSE.txt
     :alt: License

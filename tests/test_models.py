@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Tests for the `umnoc-edx` models module.
+Tests for the `cnot-edx` models module.
 """
 
 

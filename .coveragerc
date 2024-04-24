@@ -1,7 +1,7 @@
 [run]
 branch = True
 data_file = .coverage
-source=umnoc_edx
+source=cnot_edx
 omit =
     test_settings
     *migrations*

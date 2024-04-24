@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
-        "UMNOC"
-    ]
+        "CNOT"
+    ],
+    "python.analysis.typeCheckingMode": "basic"
 }

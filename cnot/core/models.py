@@ -1,5 +1,5 @@
 """
-Database models for umnoc core.
+Database models for cnot core.
 """
 
 import requests
@@ -10,7 +10,7 @@ from model_utils.fields import StatusField, MonitorField, UUIDField
 from model_utils.models import TimeStampedModel, SoftDeletableModel
 from simple_history.models import HistoricalRecords
 
-from umnoc.courses.models import (Course)
+from cnot.courses.models import (Course)
 
 
 class Organization(TimeStampedModel, SoftDeletableModel):
@@ -105,7 +105,7 @@ class Project(TimeStampedModel, SoftDeletableModel):
         Get a string representation of this model instance.
         """
         # TODO: return a string appropriate for the data fields
-        return f'<UMNOC Project, uuid: {self.uuid}, title: {self.title}>'
+        return f'<CNOT Project, uuid: {self.uuid}, title: {self.title}>'
 
 
 class Program(TimeStampedModel, SoftDeletableModel):
@@ -192,7 +192,7 @@ class ProgramCourse(TimeStampedModel):
     """
 
     class Meta:
-        app_label = "umnoc"
+        app_label = "cnot"
         unique_together = (
             ('course', 'program'),
         )
@@ -211,7 +211,7 @@ class OrganizationCourse(TimeStampedModel):
     """
 
     class Meta:
-        app_label = "umnoc"
+        app_label = "cnot"
         unique_together = (
             ('course', 'organization'),
         )

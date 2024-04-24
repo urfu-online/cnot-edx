@@ -14,7 +14,7 @@ class GetExternalCourses(View):
         context = {}
         sources = ExternalPlatform.objects.all()
         context['sources'] = sources
-        return render(request, template_name='umnoc_edx/staff/external_courses.html', context=context)
+        return render(request, template_name='cnot_edx/staff/external_courses.html', context=context)
 
     def post(self, request, *args, **kwargs):
         external_course_id = request.POST.get("external_course_id", None)

@@ -1,5 +1,5 @@
 """
-Database models for umnoc.
+Database models for cnot.
 """
 from django.conf import settings
 from django.contrib.auth import get_user_model
@@ -27,7 +27,7 @@ class LearningRequest(TimeStampedModel):
     historical_records = HistoricalRecords()
 
     class Meta:
-        app_label = "umnoc"
+        app_label = "cnot"
         unique_together = (
             ('user', 'course_id'),
         )
@@ -46,7 +46,7 @@ class ProgramEnrollment(TimeStampedModel):
     STATUS_CHOICES = EnrollmentStatuses.__MODEL_CHOICES__
 
     class Meta:
-        app_label = "umnoc"
+        app_label = "cnot"
 
         # A student enrolled in a given (program, project) should always
         # have a non-null ``user`` or ``external_user_key`` field (or both).
@@ -59,7 +59,7 @@ class ProgramEnrollment(TimeStampedModel):
         get_user_model(),
         null=True,
         blank=True, on_delete=models.CASCADE,
-        related_name="umnoc_programs",
+        related_name="cnot_programs",
     )
     external_user_key = models.CharField(
         db_index=True,

@@ -32,14 +32,14 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.sessions',
-    'umnoc',
+    'cnot',
 )
 
 LOCALE_PATHS = [
-    root('umnoc', 'conf', 'locale'),
+    root('cnot', 'conf', 'locale'),
 ]
 
-ROOT_URLCONF = 'umnoc.urls'
+ROOT_URLCONF = 'cnot.urls'
 
 SECRET_KEY = 'insecure-secret-key'
 
