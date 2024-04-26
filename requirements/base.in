@@ -2,12 +2,12 @@
 -c constraints.txt
 
 Django>=2.2              # Web application framework
-django-model-utils==4.0.0        # Provides TimeStampedModel abstract base class
+django-model-utils==4.1.1        # Provides TimeStampedModel abstract base class
 django-ninja==0.22.2
 django-ninja-extra==0.19.8
 orjson
 django-admin-ordering
-django-jazzmin
+django-jazzmin==2.6.0
 django-summernote
 fast-bitrix24
 django-clone

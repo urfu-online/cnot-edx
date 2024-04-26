@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.8.6
+aiohttp==3.9.5
     # via
     #   -r requirements/base.txt
     #   fast-bitrix24
@@ -12,7 +12,12 @@ aiosignal==1.3.1
     # via
     #   -r requirements/base.txt
     #   aiohttp
-asttokens==2.4.0
+asgiref==3.8.1
+    # via
+    #   -r requirements/base.txt
+    #   django-ninja-extra
+    #   django-simple-history
+asttokens==2.4.1
     # via
     #   -r requirements/base.txt
     #   icontract
@@ -20,11 +25,11 @@ async-timeout==4.0.3
     # via
     #   -r requirements/base.txt
     #   aiohttp
-attrs==23.1.0
+attrs==23.2.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
-beartype==0.16.4
+beartype==0.18.5
     # via
     #   -r requirements/base.txt
     #   fast-bitrix24
@@ -32,20 +37,22 @@ bleach==6.1.0
     # via
     #   -r requirements/base.txt
     #   django-summernote
-charset-normalizer==3.3.1
-    # via
-    #   -r requirements/base.txt
-    #   aiohttp
 click==8.1.7
     # via code-annotations
-code-annotations==1.5.0
+code-annotations==1.8.0
     # via -r requirements/test.in
 conditional==1.5
     # via
     #   -r requirements/base.txt
     #   django-clone
-coverage[toml]==7.3.2
-    # via pytest-cov
+contextlib2==21.6.0
+    # via
+    #   -r requirements/base.txt
+    #   django-ninja-extra
+coverage[toml]==7.5.0
+    # via
+    #   coverage
+    #   pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/openedx/edx-lint/4.1.1/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -54,6 +61,7 @@ coverage[toml]==7.3.2
     #   django-js-asset
     #   django-model-utils
     #   django-ninja
+    #   django-ninja-extra
     #   django-summernote
 django-admin-ordering==0.17.0
     # via -r requirements/base.txt
@@ -65,77 +73,85 @@ django-js-asset==2.0.0
     # via
     #   -r requirements/base.txt
     #   django-admin-ordering
-django-model-utils==4.0.0
+django-model-utils==4.1.1
     # via -r requirements/base.txt
-django-ninja==0.16.1
+django-ninja==0.22.2
+    # via
+    #   -r requirements/base.txt
+    #   django-ninja-extra
+django-ninja-extra==0.19.8
     # via -r requirements/base.txt
-django-simple-history==3.4.0
+django-simple-history==3.5.0
     # via -r requirements/base.txt
 django-summernote==0.8.20.0
     # via -r requirements/base.txt
-exceptiongroup==1.1.3
+exceptiongroup==1.2.1
     # via pytest
-fast-bitrix24==1.5.16
+fast-bitrix24==1.7.1
     # via -r requirements/base.txt
-frozenlist==1.4.0
+frozenlist==1.4.1
     # via
     #   -r requirements/base.txt
     #   aiohttp
     #   aiosignal
-icontract==2.6.4
+icontract==2.6.6
     # via
     #   -r requirements/base.txt
     #   fast-bitrix24
-idna==3.4
+idna==3.7
     # via
     #   -r requirements/base.txt
     #   yarl
 iniconfig==2.0.0
     # via pytest
-jinja2==3.1.2
+injector==0.21.0
+    # via
+    #   -r requirements/base.txt
+    #   django-ninja-extra
+jinja2==3.1.3
     # via code-annotations
-levenshtein==0.23.0
+levenshtein==0.25.1
     # via -r requirements/base.txt
-markupsafe==2.1.3
+markupsafe==2.1.5
     # via jinja2
-more-itertools==10.1.0
+more-itertools==10.2.0
     # via
     #   -r requirements/base.txt
     #   fast-bitrix24
-multidict==6.0.4
+multidict==6.0.5
     # via
     #   -r requirements/base.txt
     #   aiohttp
     #   yarl
-orjson==3.9.9
+orjson==3.10.1
     # via -r requirements/base.txt
-packaging==23.2
+packaging==24.0
     # via pytest
-pbr==5.11.1
+pbr==6.0.0
     # via stevedore
-pluggy==1.3.0
+pluggy==1.5.0
     # via pytest
-pydantic==1.8.2
+pydantic==1.10.15
     # via
     #   -r requirements/base.txt
     #   django-ninja
-pytest==7.4.3
+pytest==8.1.1
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==4.1.0
+pytest-cov==5.0.0
     # via -r requirements/test.in
-pytest-django==4.5.2
+pytest-django==4.8.0
     # via -r requirements/test.in
-python-slugify==8.0.1
+python-slugify==8.0.4
     # via code-annotations
-pytz==2023.3.post1
+pytz==2024.1
     # via
     #   -r requirements/base.txt
     #   django
 pyyaml==6.0.1
     # via code-annotations
-rapidfuzz==3.4.0
+rapidfuzz==3.8.1
     # via
     #   -r requirements/base.txt
     #   levenshtein
@@ -145,11 +161,11 @@ six==1.16.0
     #   asttokens
     #   bleach
     #   django-clone
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.1.0
+stevedore==5.2.0
     # via code-annotations
 text-unidecode==1.3
     # via python-slugify
@@ -157,20 +173,22 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-tqdm==4.66.1
+tqdm==4.66.2
     # via
     #   -r requirements/base.txt
     #   fast-bitrix24
-typing-extensions==4.8.0
+typing-extensions==4.11.0
     # via
     #   -r requirements/base.txt
+    #   asgiref
     #   icontract
+    #   injector
     #   pydantic
 webencodings==0.5.1
     # via
     #   -r requirements/base.txt
     #   bleach
-yarl==1.9.2
+yarl==1.9.4
     # via
     #   -r requirements/base.txt
     #   aiohttp
